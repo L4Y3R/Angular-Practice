@@ -1,0 +1,20 @@
+.container {
+  margin: 0px;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 70px 1fr 50px;
+  background-color: var(--white);
+}
+
+.header {
+}
+
+.footer {
+  background-color: var(--dark-blue);
+}
+
+.main {
+  border: var(--light-gray) solid;
+  border-width: 1px 0px 1px 0px;
+  height: 100%;
+}
