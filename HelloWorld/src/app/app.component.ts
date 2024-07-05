@@ -5,7 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
-  name: string = 'They call me logan';
-  year: number = new Date().getFullYear();
-}
+export class AppComponent {}
