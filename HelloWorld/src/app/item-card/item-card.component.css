@@ -1,0 +1,28 @@
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  justify-content: space-between;
+  border-radius: 20px;
+  background-color: beige;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.button {
+  margin-top: 5px;
+  border-radius: 10px;
+  height: 30px;
+}

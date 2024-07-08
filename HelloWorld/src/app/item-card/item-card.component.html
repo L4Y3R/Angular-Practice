@@ -1,0 +1,10 @@
+<div class="card-container">
+  <div *ngFor="let item of item" class="card">
+    <img [src]="item.imageUrl" alt="{{ item.label }}" />
+    <h2>{{ item.label }}</h2>
+    <p>{{ item.description }}</p>
+    <p>Price: {{ item.price }}</p>
+    <p>Count: {{ item.count }}</p>
+    <button class="button" (click)="buyItem(item)">Buy</button>
+  </div>
+</div>

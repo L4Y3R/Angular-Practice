@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { MenuButtonComponent } from './menu-button/menu-button.component';
+import { ItemCardComponent } from './item-card/item-card.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { MenuButtonComponent } from './menu-button/menu-button.component';
     HeaderComponent,
     NavBarComponent,
     MenuButtonComponent,
+    ItemCardComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

@@ -7,9 +7,10 @@
     <app-header></app-header>
   </div>
   <div class="main">
-    <app-menu-button></app-menu-button>
-    <app-menu-button></app-menu-button>
-    <app-menu-button></app-menu-button>
+    <app-item-card
+      [item]="itemsFromParent"
+      (addToCart)="addToCart($event)"
+    ></app-item-card>
   </div>
   <div class="footer"></div>
 </div>
