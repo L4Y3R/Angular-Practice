@@ -25,7 +25,7 @@ export class AppComponent {
     },
     {
       label: 'Drinks',
-      description: 'Frut Drinks',
+      description: 'Fruit Drinks',
       price: 60,
       count: 8,
       imageUrl: 'assets/products/drink.jfif',

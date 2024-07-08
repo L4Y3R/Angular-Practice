@@ -8,7 +8,8 @@
   </div>
   <div class="main">
     <app-item-card
-      [item]="itemsFromParent"
+      *ngFor="let item of itemsFromParent"
+      [item]="item"
       (addToCart)="addToCart($event)"
     ></app-item-card>
   </div>

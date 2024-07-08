@@ -16,4 +16,8 @@
   border: var(--light-gray) solid;
   border-width: 1px 0px 1px 0px;
   height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 1rem;
 }
