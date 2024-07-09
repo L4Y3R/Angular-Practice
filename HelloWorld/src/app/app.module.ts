@@ -8,6 +8,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { MenuButtonComponent } from './menu-button/menu-button.component';
 import { ItemCardComponent } from './item-card/item-card.component';
 import { HighlightDirective } from './directives/highlight-directive';
+import { ItemService } from './services/item.service';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,7 @@ import { HighlightDirective } from './directives/highlight-directive';
     HighlightDirective,
   ],
   imports: [BrowserModule, AppRoutingModule],
-  providers: [],
+  providers: [ItemService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

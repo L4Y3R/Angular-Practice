@@ -9,13 +9,13 @@
   <div class="main" [ngSwitch]="viewType">
     <div *ngSwitchCase="'grid'" class="grid">
       <app-item-card
-        *ngFor="let item of itemsFromParent"
+        *ngFor="let item of itemList"
         [item]="item"
         (addToCart)="addToCart($event)"
       ></app-item-card>
     </div>
     <div *ngSwitchCase="'list'">
-      <div *ngFor="let item of itemsFromParent">
+      <div *ngFor="let item of itemList">
         <span>{{ item.label }}</span>
       </div>
     </div>

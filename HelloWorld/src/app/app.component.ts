@@ -1,40 +1,32 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Item } from './data-models/items';
+import { ItemService } from './services/item.service';
+import { CartService } from './services/cart.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   viewType: string = 'grid';
-  cart: Item[] = [];
-  itemsFromParent: Item[] = [
-    {
-      label: 'Vanilla Ice Cream',
-      description: 'A delicious ice cream',
-      price: 10,
-      count: 3,
-      imageUrl: 'assets/products/icecream.jfif',
-    },
-    {
-      label: 'VGA Card',
-      description: 'Vga card',
-      price: 600,
-      count: 3,
-      imageUrl: 'assets/products/vga.jpg',
-    },
-    {
-      label: 'Drinks',
-      description: 'Fruit Drinks',
-      price: 60,
-      count: 8,
-      imageUrl: 'assets/products/drink.jfif',
-    },
-  ];
+  itemList: Item[] = [];
+
+  constructor(
+    private itemService: ItemService,
+    private cartService: CartService
+  ) {}
+
+  ngOnInit() {
+    this.getItems();
+  }
+
+  getItems() {
+    this.itemList = this.itemService.getItemList();
+    console.log(this.itemList);
+  }
 
   addToCart(item: Item) {
-    this.cart.push(item);
-    console.log(this.cart);
+    this.cartService.setCartItems(item);
   }
 }
