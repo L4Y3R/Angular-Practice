@@ -9,6 +9,7 @@ import { MenuButtonComponent } from './menu-button/menu-button.component';
 import { ItemCardComponent } from './item-card/item-card.component';
 import { HighlightDirective } from './directives/highlight-directive';
 import { ItemService } from './services/item.service';
+import { UnitPipePipe } from './pipes/unit-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ItemService } from './services/item.service';
     MenuButtonComponent,
     ItemCardComponent,
     HighlightDirective,
+    UnitPipePipe,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [ItemService],

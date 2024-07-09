@@ -6,11 +6,11 @@
     </h2>
     <span *ngIf="item.offer && item.offer.offerValid">
       {{ item.offer.offerDescription }} - Ends on
-      {{ item.offer.offerEnd | date }}
+      {{ item.offer.offerEnd | date : "fullDate" }}
     </span>
     <p>{{ item.description }}</p>
-    <p>Price: {{ item.price }}</p>
-    <p [ngStyle]="countFocus">Count: {{ item.count }}</p>
+    <p>Price: {{ item.price | currency : "LKR" }}</p>
+    <p [ngStyle]="countFocus">Count: {{ item.count | unitPipe : "L" }}</p>
 
     <button
       [ngClass]="btnClasses"
