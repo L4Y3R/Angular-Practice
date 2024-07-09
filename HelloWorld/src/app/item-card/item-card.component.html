@@ -4,7 +4,7 @@
     <h2>{{ item.label }}</h2>
     <p>{{ item.description }}</p>
     <p>Price: {{ item.price }}</p>
-    <p>Count: {{ item.count }}</p>
+    <p [ngStyle]="countFocus">Count: {{ item.count }}</p>
     <button
       [ngClass]="btnClasses"
       [disabled]="item.count < 4"

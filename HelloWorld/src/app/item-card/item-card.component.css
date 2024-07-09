@@ -19,20 +19,20 @@ img {
   border-radius: 20px;
 }
 
+.button {
+  margin-top: 5px;
+  border-radius: 10px;
+  height: 30px;
+}
+
 .btnDisable {
   background-color: var(--light-grey);
   border: tomato;
   color: aliceblue;
-  margin-top: 5px;
-  border-radius: 10px;
-  height: 30px;
 }
 
 .btnEnable {
   background-color: var(--green);
   color: white;
   cursor: pointer;
-  margin-top: 5px;
-  border-radius: 10px;
-  height: 30px;
 }
