@@ -1,3 +1,5 @@
+import { ItemOffer } from './offer';
+
 export interface Item {
   id: number;
   label: string;
@@ -5,4 +7,5 @@ export interface Item {
   price: number;
   count: number;
   imageUrl: string;
+  offer?: ItemOffer;
 }

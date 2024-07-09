@@ -1,13 +1,16 @@
 <div class="card-container">
   <div class="card" [ngClass]="item.count < 4 ? 'highlight-card' : ''">
     <img [src]="item.imageUrl" alt="{{ item.label }}" />
-    <h2 app-highlight>{{ item.label }}</h2>
+    <h2>
+      {{ item.label }} <span *ngIf="item.offer" class="tag"> Offer </span>
+    </h2>
+    <span *ngIf="item.offer && item.offer.offerValid">
+      {{ item.offer.offerDescription }} - Ends on
+      {{ item.offer.offerEnd | date }}
+    </span>
     <p>{{ item.description }}</p>
     <p>Price: {{ item.price }}</p>
-    <p [ngStyle]="countFocus">
-      Count: {{ item.count }}
-      <span *ngIf="item.count < 4" class="tag"> Low Quanity </span>
-    </p>
+    <p [ngStyle]="countFocus">Count: {{ item.count }}</p>
 
     <button
       [ngClass]="btnClasses"

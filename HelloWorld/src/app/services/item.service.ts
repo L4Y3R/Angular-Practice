@@ -13,6 +13,11 @@ export class ItemService {
       price: 10,
       count: 3,
       imageUrl: 'assets/products/icecream.jfif',
+      offer: {
+        offerValid: true,
+        offerEnd: '2024-06-09',
+        offerDescription: 'buy one get one free',
+      },
     },
     {
       id: 2,
@@ -29,6 +34,11 @@ export class ItemService {
       price: 60,
       count: 8,
       imageUrl: 'assets/products/drink.jfif',
+      offer: {
+        offerValid: false,
+        offerEnd: '2020-03-19',
+        offerDescription: 'Rs 1000 off',
+      },
     },
   ];
 
