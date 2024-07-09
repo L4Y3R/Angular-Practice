@@ -28,5 +28,6 @@ export class AppComponent implements OnInit {
 
   addToCart(item: Item) {
     this.cartService.setCartItems(item);
+    console.log(this.cartService.getCartItems());
   }
 }
