@@ -6,12 +6,19 @@
   <div class="header">
     <app-header></app-header>
   </div>
-  <div class="main">
-    <app-item-card
-      *ngFor="let item of itemsFromParent"
-      [item]="item"
-      (addToCart)="addToCart($event)"
-    ></app-item-card>
+  <div class="main" [ngSwitch]="viewType">
+    <div *ngSwitchCase="'grid'" class="grid">
+      <app-item-card
+        *ngFor="let item of itemsFromParent"
+        [item]="item"
+        (addToCart)="addToCart($event)"
+      ></app-item-card>
+    </div>
+    <div *ngSwitchCase="'list'">
+      <div *ngFor="let item of itemsFromParent">
+        <span>{{ item.label }}</span>
+      </div>
+    </div>
   </div>
   <div class="footer"></div>
 </div>

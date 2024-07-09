@@ -7,6 +7,7 @@ import { Item } from './data-models/items';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+  viewType: string = 'grid';
   cart: Item[] = [];
   itemsFromParent: Item[] = [
     {
