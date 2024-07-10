@@ -11,6 +11,7 @@ import { ItemCardComponent } from './item-card/item-card.component';
 import { HighlightDirective } from './directives/highlight-directive';
 import { ItemService } from './services/item.service';
 import { UnitPipePipe } from './pipes/unit-pipe.pipe';
+import { ErrorHandleService } from './services/error-handle.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { UnitPipePipe } from './pipes/unit-pipe.pipe';
     UnitPipePipe,
   ],
   imports: [BrowserModule, HttpClientModule, AppRoutingModule],
-  providers: [ItemService],
+  providers: [ItemService, ErrorHandleService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
