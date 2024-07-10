@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class ItemService {
-  listItemUrl = 'assets/be-server-mocks/itemss.json';
+  listItemUrl = 'assets/be-server-mocks/items.json';
   constructor(private http: HttpClient) {}
 
   getItemList() {
