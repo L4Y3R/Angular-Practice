@@ -1,50 +1,15 @@
 import { Injectable } from '@angular/core';
 import { Item } from '../data-models/items';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ItemService {
-  itemList = [
-    {
-      id: 1,
-      label: 'Vanilla Ice Cream',
-      description: 'A delicious ice cream',
-      price: 10,
-      count: 3,
-      imageUrl: 'assets/products/icecream.jfif',
-      offer: {
-        offerValid: true,
-        offerEnd: '2024-06-09',
-        offerDescription: 'buy one get one free',
-      },
-    },
-    {
-      id: 2,
-      label: 'VGA Card',
-      description: 'Vga card',
-      price: 600,
-      count: 3,
-      imageUrl: 'assets/products/vga.jpg',
-    },
-    {
-      id: 3,
-      label: 'Drinks',
-      description: 'Fruit Drinks',
-      price: 60,
-      count: 8,
-      imageUrl: 'assets/products/drink.jfif',
-      offer: {
-        offerValid: false,
-        offerEnd: '2020-03-19',
-        offerDescription: 'Rs 1000 off',
-      },
-    },
-  ];
+  listItemUrl = 'assets/be-server-mocks/items.json';
+  constructor(private http: HttpClient) {}
 
-  constructor() {}
-
-  getItemList(): Item[] {
-    return this.itemList;
+  getItemList() {
+    return this.http.get<Item[]>(this.listItemUrl, { observe: 'response' });
   }
 }

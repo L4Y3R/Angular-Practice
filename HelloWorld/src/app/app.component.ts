@@ -22,8 +22,9 @@ export class AppComponent implements OnInit {
   }
 
   getItems() {
-    this.itemList = this.itemService.getItemList();
-    console.log(this.itemList);
+    this.itemService.getItemList().subscribe((response) => {
+      this.itemList = response.body;
+    });
   }
 
   addToCart(item: Item) {
