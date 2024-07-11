@@ -38,7 +38,7 @@ export class CartService {
       .pipe(retry(2), catchError(this.errorHandle.handleError));
   }
 
-  getCartItems(): Item[] {
+  getCartItems(): CartItem[] {
     return this.cartItemList;
   }
 }

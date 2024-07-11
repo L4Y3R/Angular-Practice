@@ -6,24 +6,19 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
-import { MenuButtonComponent } from './menu-button/menu-button.component';
-import { ItemCardComponent } from './item-card/item-card.component';
 import { HighlightDirective } from './directives/highlight-directive';
 import { ItemService } from './services/item.service';
-import { UnitPipePipe } from './pipes/unit-pipe.pipe';
 import { ErrorHandleService } from './services/error-handle.service';
+import { ShareableModule } from './modules/shareable/shareable.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     NavBarComponent,
-    MenuButtonComponent,
-    ItemCardComponent,
     HighlightDirective,
-    UnitPipePipe,
   ],
-  imports: [BrowserModule, HttpClientModule, AppRoutingModule],
+  imports: [BrowserModule, HttpClientModule, AppRoutingModule, ShareableModule],
   providers: [ItemService, ErrorHandleService],
   bootstrap: [AppComponent],
 })

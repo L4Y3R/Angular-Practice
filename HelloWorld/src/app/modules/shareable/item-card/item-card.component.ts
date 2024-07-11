@@ -7,7 +7,7 @@ import {
   OnChanges,
   SimpleChanges,
 } from '@angular/core';
-import { Item } from '../data-models/items';
+import { Item } from '../../../data-models/items';
 
 @Component({
   selector: 'app-item-card',
