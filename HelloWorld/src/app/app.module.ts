@@ -10,6 +10,8 @@ import { HighlightDirective } from './directives/highlight-directive';
 import { ItemService } from './services/item.service';
 import { ErrorHandleService } from './services/error-handle.service';
 import { ShareableModule } from './modules/shareable/shareable.module';
+import { CartModule } from './modules/cart/cart.module';
+import { OnlineShopModule } from './modules/online-shop/online-shop.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,14 @@ import { ShareableModule } from './modules/shareable/shareable.module';
     NavBarComponent,
     HighlightDirective,
   ],
-  imports: [BrowserModule, HttpClientModule, AppRoutingModule, ShareableModule],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    AppRoutingModule,
+    ShareableModule,
+    CartModule,
+    OnlineShopModule,
+  ],
   providers: [ItemService, ErrorHandleService],
   bootstrap: [AppComponent],
 })
