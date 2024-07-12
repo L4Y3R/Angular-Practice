@@ -9,26 +9,5 @@ import { CartService } from './services/cart.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  viewType: string = 'grid';
-  itemList: Item[] = [];
-
-  constructor(
-    private itemService: ItemService,
-    private cartService: CartService
-  ) {}
-
-  ngOnInit() {
-    this.getItems();
-  }
-
-  getItems() {
-    this.itemService.getItemList().subscribe((response) => {
-      this.itemList = response.body;
-    });
-  }
-
-  addToCart(item: Item) {
-    this.cartService.setCartItems(item);
-    console.log(this.cartService.getCartItems());
-  }
+  ngOnInit(): void {}
 }
